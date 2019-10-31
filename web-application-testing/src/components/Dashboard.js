@@ -28,10 +28,10 @@ const Dashboard = () => {
     return (
         <div>
             <Display strike={strike} ball={ball} />
-            <button onClick={() => setStrike(num => ++num)}>Strike</button>
-            <button onClick={() => setBall(num => ++num)}>Ball</button>
-            <button onClick={handleHit}>Hit</button>
-            <button onClick={handleFoul}>Foul</button>
+            <button data-testid="strikeButton" onClick={() => setStrike(num => ++num)}>Strike</button>
+            <button data-testid="ballButton" onClick={() => setBall(num => ++num)}>Ball</button>
+            <button data-testid="hitButton" onClick={handleHit}>Hit</button>
+            <button data-testid="foulButton" onClick={handleFoul}>Foul</button>
         </div>
     )
 };
