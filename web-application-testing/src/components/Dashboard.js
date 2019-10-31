@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
+// local imports
+import Display from './Display';
+
 const Dashboard = () => {
     const [strike, setStrike] = useState(0);
     const [ball, setBall] = useState(0);
@@ -23,7 +26,13 @@ const Dashboard = () => {
     };
     
     return (
-        <div></div>
+        <div>
+            <Display strike={strike} ball={ball} />
+            <button onClick={() => setStrike(num => ++num)}>Strike</button>
+            <button onClick={() => setBall(num => ++num)}>Ball</button>
+            <button onClick={handleHit}>Hit</button>
+            <button onClick={handleFoul}>Foul</button>
+        </div>
     )
 };
 
